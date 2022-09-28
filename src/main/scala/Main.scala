@@ -3,13 +3,13 @@ import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 // akka http
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model.*
-import akka.http.scaladsl.server.Directives.*
+import akka.http.scaladsl.model._
+import akka.http.scaladsl.server.Directives._
 // spray (JSON)
-import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport.*
-import spray.json.DefaultJsonProtocol.*
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import spray.json.DefaultJsonProtocol._
 // Cross Origin Resource Sharing (CORS)
-import ch.megard.akka.http.cors.scaladsl.CorsDirectives.*
+import ch.megard.akka.http.cors.scaladsl.CorsDirectives._
 
 final case class User(id: Long, name: String, email: String)
 

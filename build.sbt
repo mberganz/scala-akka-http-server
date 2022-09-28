@@ -1,4 +1,7 @@
 val scala3Version = "3.2.0"
+val AkkaVersion = "2.6.20"
+val AkkaHttpVersion = "10.2.10"
+val AkkaHttpCorsVersion = "1.1.3"
 
 lazy val root = project
   .in(file("."))
@@ -9,10 +12,10 @@ lazy val root = project
     scalaVersion := scala3Version,
 
     libraryDependencies ++= Seq(
-      "com.typesafe.akka" % "akka-actor-typed_2.13" % "2.6.14",
-      "com.typesafe.akka" % "akka-stream-typed_2.13" % "2.6.14",
-      "com.typesafe.akka" % "akka-http_2.13" % "10.2.4",
-      "com.typesafe.akka" % "akka-http-spray-json_2.13" % "10.2.4",
-      "ch.megard" % "akka-http-cors_2.13" % "1.1.1",
+      "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
+      "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion,
+      "ch.megard" %% "akka-http-cors" % AkkaHttpCorsVersion
     )
   )
